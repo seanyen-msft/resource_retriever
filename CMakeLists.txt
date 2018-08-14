@@ -28,6 +28,7 @@ catkin_package(
 
 add_library(${PROJECT_NAME} src/retriever.cpp)
 target_link_libraries(${PROJECT_NAME} ${CURL_LIBRARIES} ${catkin_LIBRARIES})
+set_target_properties(${PROJECT_NAME} PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
 
 if(CATKIN_ENABLE_TESTING)
   add_subdirectory(test EXCLUDE_FROM_ALL)
