@@ -26,7 +26,7 @@ catkin_package(
   LIBRARIES ${PROJECT_NAME}
   INCLUDE_DIRS include)
 
-add_library(${PROJECT_NAME} src/retriever.cpp)
+add_library(${PROJECT_NAME} STATIC src/retriever.cpp)
 target_link_libraries(${PROJECT_NAME} ${CURL_LIBRARIES} ${catkin_LIBRARIES})
 
 if(CATKIN_ENABLE_TESTING)
